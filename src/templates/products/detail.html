@@ -1,0 +1,16 @@
+{% extends 'base.html'%} 
+{% block content %}
+
+{% for item in object %}
+<h1>{{item.title}}</h1>
+{% if not item.desc %}
+<p>Description coming soon</p>
+{% else %}
+<p>{{item.desc}}</p>
+<p>{{item.price}}</p>
+<p>{{item.summary}}</p>
+<p>{{item.feature}}</p>
+{% endif %} 
+{% endfor %}
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends 'base.html'%} {% block content%}
+
+<h1>This is django about page</h1>
+<p>{{"this is a template"|capfirst|title}}</p>
+
+{{my_html|slugify|striptags}}
+<p>
+  {% comment %} context variable {% endcomment %} {{my_text}}, {{my_number}}
+</p>
+
+<ul>
+  {% for item in my_list %} {% if forloop.counter == 1 %}
+  <li style="font-weight: bold; font-size: 2em">
+    {{ forloop.counter }} - {{ item|add:22 }}
+  </li>
+  {% else %}
+  <li>{{ forloop.counter }} - {{ item }}</li>
+  {% endif %} {% endfor %}
+</ul>
+
+{%endblock%}
