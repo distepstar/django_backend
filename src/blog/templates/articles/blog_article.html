@@ -1,0 +1,12 @@
+{% extends 'base.html'%} {% block content %}
+<h1>Article Page</h1>
+
+<p>
+  {% if object.title == None %} 
+  No content exist 
+  {% else %} 
+  {{object.title}}
+  {% endif %}
+</p>
+
+{% endblock content %}

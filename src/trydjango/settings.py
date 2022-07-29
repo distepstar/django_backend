@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # from python3 manage.py startapp product
     'pages',
     'products',
+    'blog',
     # make sure to call 1. python3 manage.py makemigrations -> 2. python3 manage.py migrate
     # own
 ]

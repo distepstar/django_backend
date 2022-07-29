@@ -15,5 +15,6 @@ class Product(models.Model):
     feature = models.BooleanField(default=False) # null=True # default=True
 
     def get_abs_url(self):
-        ## kwrgs = keyword arguments that is going pass in the url (e.g. <int:my_id>)
-        return reverse("product-detail-id", kwargs={"my_id": self.id}) #f"/product_detail/{self.id}"
+        # kwrgs = keyword arguments that is going pass in the url (e.g. <int:my_id>)
+        # base on app_name in the urls file namespace:name
+        return reverse("product_detail:product-detail-id", kwargs={"my_id": self.id}) #f"/product_detail/{self.id}"

@@ -1,0 +1,15 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1>Article List Page</h1>
+
+
+{% if object %} 
+{% for item in object %}
+<h1>{{item.title}}</h1>
+<P>{{item.content}}</p>
+<P>{{item.active}}</p>
+{% endfor %}
+
+{% endif %}
+{% endblock content %}

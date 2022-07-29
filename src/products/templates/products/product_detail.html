@@ -3,7 +3,7 @@
 {% block content %}
 
 <nav>
-    <a href="/product_create/">Create new product</a>
+    <a href="create/">Create new product</a>
 </nav>
 
 {% for item in object %}
@@ -18,7 +18,7 @@
 <nav>
     {% if object.count > 1 %}
         <a href='{{ item.get_abs_url }}'>Select</a>
-        <a href="{{item.get_abs_url}}/delete/">Delete</a>
+        <a href="{{item.get_abs_url}}delete/">Delete</a>
     {% else %}
         <a href="delete/">Delete</a>
     {% endif %}

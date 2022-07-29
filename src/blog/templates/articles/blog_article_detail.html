@@ -1,0 +1,12 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1>Article Detail Page</h1>
+
+{% if object %} 
+<h1>{{object.title}}</h1>
+<P>{{object.content}}</p>
+<P>{{object.active}}</p>
+{% endif %}
+
+{% endblock content %}
